@@ -1,60 +1,85 @@
+:root {
+	/* Padding values */
+	--padding-none: 0;
+	--padding-sm: 10px;
+	--padding-md: 1rem;
+	--padding-lg: 20px;
+
+	/* Colors */
+	--color-primary: darkblue;
+	--color-light: white;
+	--color-border: #000;
+	--color-gray: #333;
+	--color-bg-light: #eee;
+
+	/* Border styles */
+	--border-default: 1px solid var(--color-border);
+
+	/* Common widths */
+	--width-main: 800px;
+	--width-aside: 20rem;
+
+	/* Image properties */
+	--img-height: auto;
+}
+
 nav {
-/*Box model stuff*/
-    padding: 10px;
-    background-color: darkblue;
+	/*Box model stuff*/
+	padding: var(--padding-sm);
+	background-color: var(--color-primary);
 }
 nav a {
-/*Display stuff*/
-    display: block;
-/*Box model stuff*/
-    padding: 20px;
-/*Typography stuff*/
-    color: white;
+	/*Display stuff*/
+	display: block;
+	/*Box model stuff*/
+	padding: var(--padding-lg);
+	/*Typography stuff*/
+	color: var(--color-light);
 }
 main {
-/*Box model stuff*/
-    max-width: 800px;
+	/*Box model stuff*/
+	max-width: var(--width-main);
 }
 
 h1 {
-/*Typography stuff*/
-    color: darkblue;
+	/*Typography stuff*/
+	color: var(--color-primary);
 }
 
 main img {
-/*Box model stuff*/
-    width: 150px;
-    height: auto;
-    padding: 2px;
-    border: 1px solid black;
-/*Miscellaneous*/
-    box-shadow: 0 0 30px gray;
+	/*Box model stuff*/
+	width: 150px;
+	height: var(--img-height);
+	padding: 2px;
+	border: var(--border-default);
+	/*Miscellaneous*/
+	box-shadow: 0 0 30px var(--color-gray);
 }
 
 p {
-/*Box model stuff*/
-    padding: 0;
+	/*Box model stuff*/
+	padding: var(--padding-none);
 }
 
 aside {
-/*Box model stuff*/
-    width: 20rem;
-    margin: 1rem;
-    padding: 1rem;
-    border: 1px solid rgb(0, 0, 0 / 0.2);
-    background-color: #eee;
-/*Typography stuff*/
-    text-align: center;
-    color: #333;
+	/*Box model stuff*/
+	width: var(--width-aside);
+	margin: var(--padding-md);
+	padding: var(--padding-md);
+	border: 1px solid rgb(0, 0, 0 / 0.2);
+	background-color: var(--color-bg-light);
+	/*Typography stuff*/
+	text-align: center;
+	color: var(--color-gray);
 }
 
 aside img {
-    width: 200px;
-    height: auto;
+	width: 200px;
+	height: var(--img-height);
 }
 
 footer {
-    margin-top: 15px;
-    border-top: 1px solid #000;
-    text-align: center;
+	margin-top: var(--padding-md);
+	border-top: var(--border-default);
+	text-align: center;
 }
