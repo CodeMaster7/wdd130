@@ -23,6 +23,21 @@
 	--img-height: auto;
 }
 
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Class Selectors */
+.box {
+	margin: var(--padding-md);
+	padding: var(--padding-md);
+	border: 1px solid rgb(0, 0, 0 / 0.2);
+	background-color: var(--color-bg-light);
+	color: var(--color-gray);
+    clear: both;
+}
 nav {
 	/*Box model stuff*/
 	padding: var(--padding-sm);
@@ -52,8 +67,10 @@ main img {
 	height: var(--img-height);
 	padding: 2px;
 	border: var(--border-default);
+    margin: 0 0 1rem 1rem;
 	/*Miscellaneous*/
 	box-shadow: 0 0 30px var(--color-gray);
+	float: right;
 }
 
 p {
@@ -62,15 +79,17 @@ p {
 }
 
 aside {
+    position: relative;
 	/*Box model stuff*/
 	width: var(--width-aside);
-	margin: var(--padding-md);
-	padding: var(--padding-md);
-	border: 1px solid rgb(0, 0, 0 / 0.2);
-	background-color: var(--color-bg-light);
 	/*Typography stuff*/
 	text-align: center;
-	color: var(--color-gray);
+}
+
+aside h2 {
+    position: absolute;
+    top: 20px;
+    left: 125px;
 }
 
 aside img {
