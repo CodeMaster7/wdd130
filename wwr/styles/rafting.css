@@ -1,3 +1,4 @@
+/* CSS Variables */
 :root {
     /* Colors */
     --primary-color: #004080;
@@ -10,51 +11,50 @@
     --paragraph-font: 'Open Sans', Helvetica, sans-serif;
 }
 
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base Layout */
 body {
-    max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Make images responsive */
+main section {
+    max-width: 90%;
+    margin: 0 auto 5rem;
+}
+
+/* Responsive Images */
 img {
     max-width: 100%;
     height: auto;
 }
 
-/* Typography Styles */
+/* Typography */
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2 {
     color: var(--primary-color);
     font-family: var(--heading-font);
-}
-
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    text-align: center;
 }
 
 h2 {
+    color: var(--primary-color);
     font-size: 2rem;
-    margin-bottom: 0.8rem;
 }
 
-h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.6rem;
-}
 
 p {
     color: var(--accent-color2);
     line-height: 1.5;
-    margin-bottom: 1rem;
     font-family: var(--paragraph-font);
 }
 
-/* Link Styles */
+/* Navigation and Links */
 a {
     color: var(--secondary-color);
     text-decoration: none;
@@ -70,7 +70,30 @@ a img {
     border: none;
 }
 
-/* Hero section styles */
+/* Header Layout */
+header {
+    margin: 1rem auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    max-width: 1000px;
+}
+
+header img {
+    width: 100px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav a {
+    font-family: var(--paragraph-font);
+    font-size: 1.2rem;
+}
+
+/* Hero Section */
 .hero {
     width: 100%;
     position: relative;
@@ -85,33 +108,107 @@ a img {
 
 .hero h1 {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
     color: var(--accent-color1);
-    /* white text for visibility */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    /* shadow for better readability */
-    z-index: 1;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
 }
 
 .hero article {
     position: absolute;
-    top: 175px;
-    right: 30px;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background: rgba(0, 0, 0, 0.6);
-    /* semi-transparent background */
     padding: 1.5rem;
-    max-width: 400px;
     border-radius: 5px;
+    width: 90%;
 }
 
 .hero article p {
     color: var(--accent-color1);
+    font-family: var(--paragraph-font);
     margin: 0;
 }
 
 .hero article img {
     float: right;
-    width: 150px;
+    width: 250px;
     margin-left: 1rem;
+}
+
+/* History Section */
+.history {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+    align-items: start;
+}
+
+.history h2 {
+    grid-column: 1 / -1;
+}
+
+.history p {
+    text-align: justify;
+}
+
+.history img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Adventures Section */
+.adventures {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5rem;
+    align-items: start;
+}
+
+.adventures h2 {
+    grid-column: 1 / -1;
+}
+
+.adventures figcaption {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-family: var(--paragraph-font);
+}
+
+/* Footer Layout */
+footer {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    width: 100%;
+    padding: 0 2rem 1rem;
+    margin-top: 5%;
+}
+
+footer p {
+    text-align: center;
+}
+
+footer .sociallinks {
+    display: flex;
+    gap: 1rem;
+}
+
+footer .sociallinks img {
+    width: 30px;
+    height: 30px;
+}
+
+footer .sociallinks a:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
 }
