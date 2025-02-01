@@ -1,10 +1,16 @@
 /* CSS Variables */
 :root {
-    /* Colors */
+    /* Colors - Updated for AA contrast */
     --primary-color: #004080;
+    /* Darker blue for better contrast */
     --secondary-color: #00a3e0;
+    /* Brighter blue that meets AA */
     --accent-color1: #ffffff;
+    /* White */
     --accent-color2: #333333;
+    /* Darker gray for better contrast */
+    --overlay-bg: rgba(0, 0, 0, 0.85);
+    /* Darker overlay for better contrast */
 
     /* Fonts */
     --heading-font: 'Oswald', Helvetica, sans-serif;
@@ -89,8 +95,11 @@ header nav {
 }
 
 header nav a {
+    color: var(--primary-color);
     font-family: var(--paragraph-font);
     font-size: 1.2rem;
+    font-weight: 700;
+    /* Bolder text for better contrast */
 }
 
 /* Hero Section */
@@ -112,7 +121,8 @@ header nav a {
     left: 50%;
     transform: translateX(-50%);
     color: var(--accent-color1);
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    /* Stronger text shadow */
     font-size: 2.5rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -124,7 +134,8 @@ header nav a {
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.6);
+    background: var(--overlay-bg);
+    /* Darker overlay */
     padding: 1.5rem;
     border-radius: 5px;
     width: 90%;
@@ -181,6 +192,13 @@ header nav a {
     text-align: center;
     margin-top: 0.5rem;
     font-family: var(--paragraph-font);
+    background-color: var(--overlay-bg);
+    /* Darker overlay */
+    color: var(--accent-color1);
+    padding: 0.75rem;
+    /* Slightly more padding */
+    font-weight: 500;
+    /* Medium weight for better readability */
 }
 
 /* Footer Layout */
