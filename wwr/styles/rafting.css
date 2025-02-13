@@ -747,3 +747,179 @@ footer .sociallinks a:hover {
 ::placeholder {
     color: #595959;
 }
+
+/* Update Trips Section Grid */
+.trips {
+    max-width: 1500px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* Featured trip card styles */
+.featured-trip-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.featured-trip {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+/* Regular trip card styles */
+.regular-trip {
+    display: flex;
+    flex-direction: column;
+}
+
+.regular-trip img {
+    height: 250px;
+}
+
+.regular-trip .trip-content {
+    padding: 1.5rem;
+}
+
+/* Common trip card styles */
+.trip-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 500px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.trip-card img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Update existing trip content styles */
+.trip-content {
+    padding: 0 2rem 1.5rem;
+}
+
+.trip-content h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: left;
+    font-size: 1.8rem;
+}
+
+.trip-features {
+    margin-top: auto;
+    padding-top: 1.5rem;
+}
+
+.trip-details {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: var(--font-weight-bold);
+}
+
+.trip-features {
+    list-style: none;
+    margin: 1.5rem 0;
+    padding: 0;
+}
+
+.trip-features li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--accent-color2);
+}
+
+.trip-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+}
+
+.price {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    font-weight: var(--font-weight-bold);
+    margin-top: 1.5rem;
+}
+
+.trip-cta {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(rgba(0, 64, 128, 0.95), rgba(0, 64, 128, 0.95)),
+        url('../images/rafting4.webp') center/cover;
+    color: var(--accent-color1);
+    margin: 4rem 0;
+}
+
+.trip-cta h2 {
+    color: var(--accent-color1);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.trip-cta p {
+    color: var(--accent-color1);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Trip Table Styles */
+.trip-table {
+    max-width: 1200px;
+    margin: 10rem auto 10rem;
+    padding: 0 2rem;
+}
+
+.trip-table h2 {
+    margin-bottom: 2rem;
+}
+
+.table-container {
+    overflow-x: auto;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    font-family: var(--paragraph-font);
+}
+
+th,
+td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: var(--accent-color1);
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tr:hover {
+    background-color: #f1f2f3;
+}
+
+td {
+    color: var(--accent-color2);
+}
