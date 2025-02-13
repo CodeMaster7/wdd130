@@ -473,7 +473,7 @@ footer .sociallinks a:hover {
 /* Hero Text */
 .hero-text {
     position: absolute;
-    bottom: 15vh;
+    bottom: 26vh;
     left: 5vw;
     color: var(--accent-color1);
     text-align: left;
@@ -572,7 +572,7 @@ footer .sociallinks a:hover {
     background-color: #f1f2f3;
     padding: 4rem 2rem;
     text-align: center;
-    margin: 4rem 0;
+    margin: 10rem 0;
 }
 
 .newsletter h2 {
