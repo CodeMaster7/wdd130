@@ -167,7 +167,7 @@ header nav a {
     gap: 5rem;
     align-items: start;
     max-width: 90%;
-    margin: 5rem auto 5rem;
+    margin: 5rem auto 10rem;
 }
 
 .history h2 {
