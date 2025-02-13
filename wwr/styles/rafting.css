@@ -154,6 +154,12 @@ header nav a {
     margin-left: 1rem;
 }
 
+.about-us-title {
+    text-align: left;
+    letter-spacing: 0.1em;
+    color: var(--accent-color1);
+}
+
 /* History Section */
 .history {
     display: grid;
