@@ -1,16 +1,19 @@
 /* CSS Variables */
 :root {
     /* Colors - Updated for AA contrast */
-    --primary-color: #004080;
-    /* Darker blue for better contrast */
-    --secondary-color: #00a3e0;
-    /* Brighter blue that meets AA */
+    --primary-color: #003366;
+    /* Darker blue */
+    --secondary-color: #0056b3;
+    /* Brighter blue with better contrast */
     --accent-color1: #ffffff;
     /* White */
-    --accent-color2: #333333;
-    /* Darker gray for better contrast */
+    --accent-color2: #1a1a1a;
+    /* Dark gray */
     --overlay-bg: rgba(0, 0, 0, 0.85);
-    /* Darker overlay for better contrast */
+    --text-light: #595959;
+    /* Light text that meets AA */
+    --link-hover: #004080;
+    /* Darker blue for hover states */
 
     /* Fonts */
     --heading-font: 'Oswald', Helvetica, sans-serif;
@@ -62,12 +65,12 @@ p {
 
 /* Navigation and Links */
 a {
-    color: var(--secondary-color);
+    color: #0056b3;
     text-decoration: none;
 }
 
 a:hover {
-    color: var(--primary-color);
+    color: #003366;
 }
 
 /* Remove underlines from image links */
@@ -362,7 +365,8 @@ footer .sociallinks a:hover {
 
 .form-intro {
     text-align: center;
-    color: #666;
+    color: #4d4d4d;
+    /* Darker gray for better contrast */
     margin-bottom: 3rem;
     font-size: 1.2rem;
     line-height: 1.6;
@@ -499,7 +503,7 @@ footer .sociallinks a:hover {
 
 .hero-link {
     display: inline-block;
-    background-color: var(--secondary-color);
+    background-color: #0077cc;
     color: var(--accent-color1);
     padding: 0.8rem 1.5rem;
     border-radius: 5px;
@@ -510,8 +514,8 @@ footer .sociallinks a:hover {
 }
 
 .hero-link:hover {
-    background-color: var(--accent-color1);
-    color: var(--primary-color);
+    background-color: #ffffff;
+    color: #004080;
     transform: translateY(-2px);
 }
 
@@ -582,7 +586,8 @@ footer .sociallinks a:hover {
 }
 
 .newsletter p {
-    color: var(--accent-color2);
+    color: #4d4d4d;
+    /* Darker gray for better contrast */
     font-size: 1.2rem;
     margin-bottom: 2rem;
     max-width: 600px;
@@ -622,7 +627,7 @@ footer .sociallinks a:hover {
 }
 
 .newsletter button {
-    background-color: var(--primary-color);
+    background-color: #003366;
     color: var(--accent-color1);
     padding: 1rem 3rem;
     border: none;
@@ -633,14 +638,14 @@ footer .sociallinks a:hover {
 }
 
 .newsletter button:hover {
-    background-color: var(--secondary-color);
+    background-color: #0056b3;
 }
 
 /* Call to Action Section */
 .cta {
     text-align: center;
     padding: 6rem 2rem;
-    background: linear-gradient(rgba(0, 64, 128, 0.9), rgba(0, 64, 128, 0.9)),
+    background: linear-gradient(rgba(0, 64, 128, 0.95), rgba(0, 64, 128, 0.95)),
         url('../images/rafting3.jpg') center/cover;
     color: var(--accent-color1);
     margin: 4rem 0;
@@ -663,7 +668,8 @@ footer .sociallinks a:hover {
 
 .cta-button {
     display: inline-block;
-    background-color: var(--secondary-color);
+    background-color: #0056b3;
+    /* Updated for better contrast */
     color: var(--accent-color1);
     padding: 1rem 3rem;
     border-radius: 5px;
@@ -675,8 +681,8 @@ footer .sociallinks a:hover {
 }
 
 .cta-button:hover {
-    background-color: var(--accent-color1);
-    color: var(--primary-color);
+    background-color: #003366;
+    color: var(--accent-color1);
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
@@ -735,4 +741,9 @@ footer .sociallinks a:hover {
 
 .large-item {
     grid-column: span 2;
+}
+
+/* Update form placeholder text color for better contrast */
+::placeholder {
+    color: #595959;
 }
